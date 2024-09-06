@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemancil.Portfolio</title>
+    <!-- Import Google Font Nerko One -->
+    <link rel="icon" href="j.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <style>
+        /* General styles */
+        body {
+            background-color: #F9ED69;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 0;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #F9ED69; /* Same as body background to blend */
+            color: #B83B5E;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            z-index: 1000; /* Ensure header stays on top */
+        }
+
+        .content {
+            margin: 130px auto 20px; /* Center content with auto margins */
+            padding: 20px;
+            max-width: 1200px; /* Limit maximum width */
+            color: #6A2C70;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .content1 {
+            margin-left: 670px;
+        }
+
+        hr {
+            border: 0; /* Removes default border */
+            height: 4px; /* Thickness of the line */
+            background-color: #B83B5E; /* Color of the line */
+            margin: 20px 0; /* Margin above and below the line */
+            border-radius: 15px;
+        }
+
+        h1 {
+            font-family: "Nerko One", cursive;
+            font-weight: 400;
+            font-style: normal;
+            margin: 0;
+        }
+
+        nav {
+            margin: 0;
+        }
+
+        nav a {
+            color: #B83B5E;
+            text-decoration: none;
+            margin: 0 15px; /* Adjust margin for smaller screens */
+            font-size: 18px;
+        }
+
+        .content2 {
+            margin: 50px auto 20px; /* Center content with auto margins */
+            padding: 20px;
+            max-width: 1200px; /* Limit maximum width */
+            margin-top: 10px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Space between cards */
+            justify-content: center; /* Center cards horizontally */
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px; /* Card width */
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-family: "Nerko One", cursive;
+            font-weight: 400;
+            margin: 10px 0;
+            font-size: 20px;
+            color: #B83B5E;
+        }
+
+        .card-description {
+            color: #555;
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Scale card on hover */
+        }
+
+        .contact-box {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .contact-box h2 {
+            font-family: "Nerko One", cursive;
+            color: #B83B5E;
+            margin-bottom: 20px;
+        }
+
+        .contact-box label {
+            display: block;
+            margin-bottom: 5px;
+            color: #6A2C70;
+        }
+
+        .contact-box input, .contact-box textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .contact-box textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .contact-box button {
+            background-color: #B83B5E;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .contact-box button:hover {
+            background-color: #A73D51;
+        }
+
+        .social-icons {
+            display: flex;
+            flex-direction: column; /* Stack icons vertically */
+            gap: 10px; /* Space between icons */
+            position: absolute; /* Fixed position */
+            top: 350px; /* Position from the top edge */
+            right: 350px; /* Position from the right edge */
+        }
+
+
+        .social-icons a {
+            font-size: 24px;
+            color: #fff;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20%;
+            text-decoration: none; /* Remove underline */
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .social-icons a.facebook {
+            background-color: #3b5998;
+        }
+
+        .social-icons a.instagram {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+
+        .social-icons a.linkedin {
+            background-color: #0077b5;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.1); /* Slightly enlarge icon on hover */
+        }
+
+        /* Responsive Design */
+        @media only screen and (max-width: 600px) {
+            header {
+                flex-direction: column; 
+                align-items: center;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 24px;
+                text-align: center;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+                font-size: 16px;
+            }
+
+            .content {
+                margin: 130px 10px 20px; /* Adjusted margin for smaller screens */
+                padding: 10px;
+                margin-top: 200px;
+            }
+
+            .content1 {
+                margin: 130px 10px 20px; /* Adjusted margin for smaller screens */
+                margin-top: 20px;
+            }
+
+            .content2 {
+                margin-top: 10px;
+            }
+
+            .gender {
+                width: 20px;
+                height: 20px;
+            }
+
+            .apple {
+                width: 20px;
+                height: 20px;
+            }
+
+            .content h1 {
+                font-size: 20px; /* Adjust font size for smaller screens */
+            } 
+            
+            .social-icons {
+                display: flex; /* Ensure social icons are displayed in a row */
+                justify-content: center; /* Center icons horizontally */
+                position: static; /* Change to static positioning */
+                margin: 20px 170px; /* Center social icons block */
+                gap: 10px; /* Space between icons */
+            }
+
+            .facebook {
+                margin-left: -50px;
+            }
+
+            .instagram {
+                margin-top: -50px;
+            }
+
+            .linkedin {
+                margin-left: 50px;
+                margin-top: -50px;
+            }
+
+
+
+        }
+
+        /* Tablet screens (min-width 600px) */
+        @media only screen and (min-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            nav a {
+                font-size: 16px;
+            }
+        }
+
+        /* Desktop screens (min-width 1200px) */
+        @media only screen and (min-width: 1200px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            nav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="textheader">Contact.Designer</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Aboutme.html">About Me</a>
+            <a href="Projects.html">Projects</a>
+            <a href="Contact.html">Contact Me</a>
+        </nav>
+    </header>
+    
+    <div class="content">
+        <h1 style="font-size: 30px; color: #B83B5E;">Let’s Talk!</h1>
+        <h1 style="font-size: 30px; color: #6A2C70;">Let’s Create Something Together</h1>
+    </div>
+
+    <div class="contact-box">
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="John Doe Dela cruz" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <div class="social-icons">
+        <a href="https://www.facebook.com/johnmar.elemancil.92/" target="_blank" class="facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/jomzzyy/" target="_blank" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/john-mar-ensik-elemancil-575b67326/" target="_blank" class="linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+
+</body>
+</html>

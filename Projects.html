@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemancil.Portfolio</title>
+    <!-- Import Google Font Nerko One -->
+    <link rel="icon" href="j.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    
+    <style>
+        /* General styles */
+        body {
+            background-color: #F9ED69;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 0;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #F9ED69; /* Same as body background to blend */
+            color: #B83B5E;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            z-index: 1000; /* Ensure header stays on top */
+        }
+
+        .content {
+            margin: 130px auto 20px; /* Center content with auto margins */
+            padding: 20px;
+            max-width: 1200px; /* Limit maximum width */
+            color: #6A2C70;
+            text-align: center;
+        }
+
+        .content1 {
+            margin-left: 670px;
+        }
+
+        hr {
+            border: 0; /* Removes default border */
+            height: 4px; /* Thickness of the line */
+            background-color: #B83B5E; /* Color of the line */
+            margin: 20px 0; /* Margin above and below the line */
+            border-radius: 15px;
+        }
+
+        h1 {
+            font-family: "Nerko One", cursive;
+            font-weight: 400;
+            font-style: normal;
+            margin: 0;
+        }
+
+        nav {
+            margin: 0;
+        }
+
+        nav a {
+            color: #B83B5E;
+            text-decoration: none;
+            margin: 0 15px; /* Adjust margin for smaller screens */
+            font-size: 18px;
+        }
+
+        .content2 {
+            margin: 50px auto 20px; /* Center content with auto margins */
+            padding: 20px;
+            max-width: 1200px; /* Limit maximum width */
+            margin-top: 10px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Space between cards */
+            justify-content: center; /* Center cards horizontally */
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px; /* Card width */
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-family: "Nerko One", cursive;
+            font-weight: 400;
+            margin: 10px 0;
+            font-size: 20px;
+            color: #B83B5E;
+        }
+
+        .card-description {
+            color: #555;
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Scale card on hover */
+        }
+
+
+        /* Responsive Design */
+        @media only screen and (max-width: 600px) {
+            header {
+                flex-direction: column; 
+                align-items: center;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 24px;
+                text-align: center;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+                font-size: 16px;
+            }
+
+            .content {
+                margin: 130px 10px 20px; /* Adjusted margin for smaller screens */
+                padding: 10px;
+                margin-top: 200px;
+            }
+
+            .content1 {
+                margin: 130px 10px 20px; /* Adjusted margin for smaller screens */
+                margin-top: 20px;
+            }
+
+            .content2 {
+                margin-top: 10px;
+            }
+
+            .gender {
+                width: 20px;
+                height: 20px;
+            }
+
+            .apple {
+                width: 20px;
+                height: 20px;
+            }
+
+            .content h1 {
+                font-size: 20px; /* Adjust font size for smaller screens */
+            }
+        }
+
+        /* Tablet screens (min-width 600px) */
+        @media only screen and (min-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            nav a {
+                font-size: 16px;
+            }
+        }
+
+        /* Desktop screens (min-width 1200px) */
+        @media only screen and (min-width: 1200px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            nav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="textheader">Projects.Designer</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Aboutme.html">About Me</a>
+            <a href="Projects.html">Projects</a>
+            <a href="Contact.html">Contact Me</a>
+        </nav>
+    </header>
+    
+    <div class="content">
+        <h1 style="font-size: 70px;">PROJECTS</h1>
+    </div>
+
+    <div class="content2">
+        <div class="card-container">
+            <div class="card">
+                <img src="pic1.png" alt="Card Image 1">
+                <div class="card-content">
+                    <div class="card-title">Card Title 1</div>
+                    <div class="card-description">This is a description for the first card. It provides brief information about the card's content.</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="pic2.png" alt="Card Image 2">
+                <div class="card-content">
+                    <div class="card-title">Card Title 2</div>
+                    <div class="card-description">This is a description for the second card. It provides brief information about the card's content.</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="pic3.png" alt="Card Image 3">
+                <div class="card-content">
+                    <div class="card-title">Card Title 3</div>
+                    <div class="card-description">This is a description for the third card. It provides brief information about the card's content.</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="pic4.jpg" alt="Card Image 4">
+                <div class="card-content">
+                    <div class="card-title">Card Title 3</div>
+                    <div class="card-description">This is a description for the third card. It provides brief information about the card's content.</div>
+                </div>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+    </div>
+
+</body>
+</html>
+
