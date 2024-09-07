@@ -124,12 +124,12 @@
             transform: scale(1.05); /* Scale card on hover */
         }
 
+        
         footer p {
-            margin: 0;
+            margin: 0 0 30px 0;
             color: #333;
             text-align: center;
-            padding: 20px;
-            font-family: Arial, sans-serif;
+            font-family: arial, sans-serif;
         }
 
 
@@ -146,16 +146,31 @@
                 text-align: center;
             }
 
+            nav {
+                display: flex;
+                justify-content: center; /* Aligns links horizontally and centers them */
+                flex-wrap: wrap; /* Allows the links to wrap if there's not enough space */
+                }
+
             nav a {
                 display: block;
                 margin: 10px 0;
-                font-size: 16px;
+                font-size: 12px;
+                padding: 11px;
+                font-weight: 700;
+            }
+
+            footer p {
+                margin: 0 0 30px 0;
+                color: #333;
+                text-align: center;
+                font-family: arial, sans-serif;
             }
 
             .content {
                 margin: 130px 10px 20px; /* Adjusted margin for smaller screens */
                 padding: 10px;
-                margin-top: 200px;
+                margin-top: 150px;
             }
 
             .content1 {
@@ -230,18 +245,21 @@
     </div>
 
     <div class="content2">
-        <div class="card-container">      
-            <div class="card">
-                <img src="johnmar.designer.png" alt="Card Image 1">
-                <div class="card-content">
-                    <div class="card-title">Elemancil.Portfolio</div>
-                    <div class="card-description">This is my portfolio website for my ui/ux design purposes
+        <div class="card-container">
+            
+                <div class="card">
+                    <img src="johnmar.designer.png" alt="Card Image 1">
+                    <div class="card-content">
+                        <div class="card-title">Elemancil.Portfolio</div>
+                        <div class="card-description">This is my portfolio website for my ui/ux design purposes
                             and to collaborate with me about the world of ui/ux designs worldwide specially
                             to those who wants to share their talent to designing a website. Feel free to message
                             me on my contact social media platforms.
+                        </div>
                     </div>
                 </div>
-            </div>            
+            
+            
             <div class="card">
                 <img src="pic2.png" alt="Card Image 2">
                 <div class="card-content">
