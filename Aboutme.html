@@ -123,13 +123,11 @@
         }
 
         footer p {
-            margin: 0;
+            margin: 0 0 30px 0;
             color: #333;
             text-align: center;
-            padding: 20px;
-            font-family: Arial, sans-serif;
+            font-family: arial, sans-serif;
         }
-
 
         /* Responsive Design */
         @media only screen and (max-width: 600px) {
@@ -144,16 +142,31 @@
                 text-align: center;
             }
 
+            nav {
+                display: flex;
+                justify-content: center; /* Aligns links horizontally and centers them */
+                flex-wrap: wrap; /* Allows the links to wrap if there's not enough space */
+                }
+
             nav a {
                 display: block;
                 margin: 10px 0;
-                font-size: 16px;
+                font-size: 12px;
+                padding: 11px;
+                font-weight: 700;
+            }
+
+            footer p {
+                margin: 0 0 30px 0;
+                color: #333;
+                text-align: center;
+                font-family: arial, sans-serif;
             }
 
             .content {
                 margin: 130px 10px 20px; /* Adjusted margin for smaller screens */
                 padding: 10px;
-                margin-top: 200px;
+                margin-top: 150px;
             }
 
             .content1 {
@@ -290,4 +303,6 @@
 
 </body>
 </html>
+
+
 
